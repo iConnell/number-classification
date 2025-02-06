@@ -15,7 +15,9 @@ export const classifyNumber = async (req: Request, res: Response) => {
       return;
     }
 
-    const url = `http://numbersapi.com/${number}`;
+    const numbersAPIURL = process.env.NUMBERS_API_URL || "";
+
+    const url = `${numbersAPIURL}/${number}`;
     const funFact = await axios.get(url);
 
     const response = {
