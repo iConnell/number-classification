@@ -10,7 +10,12 @@ export const classifyNumber = async (req: Request, res: Response) => {
   try {
     const { number } = req.query as unknown as IQueryParams;
 
-    if (!number || isNaN(Number(number))) {
+    if (!number) {
+      res.status(400).json({ number: null, error: true });
+      return;
+    }
+
+    if (isNaN(Number(number))) {
       res.status(400).json({ number: "alphabet", error: true });
       return;
     }
