@@ -16,7 +16,7 @@ export const classifyNumber = async (req: Request, res: Response) => {
     }
 
     if (isNaN(Number(number))) {
-      res.status(400).json({ number: "alphabet", error: true });
+      res.status(400).json({ number, error: true });
       return;
     }
 
