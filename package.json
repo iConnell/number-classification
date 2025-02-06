@@ -1,0 +1,28 @@
+{
+  "name": "number-classification",
+  "version": "1.0.0",
+  "description": "HNG stage 1 task",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.0",
+    "nodemon": "^3.1.9",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.6.12",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2"
+  }
+}
