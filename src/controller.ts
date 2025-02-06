@@ -20,12 +20,14 @@ export const classifyNumber = async (req: Request, res: Response) => {
     const url = `${numbersAPIURL}/${number}`;
     const funFact = await axios.get(url);
 
+    const num = Number(number);
+
     const response = {
       number,
-      is_prime: isPrime(number),
-      is_perfect: isPerfect(number),
-      properties: getProperties(Number(number)),
-      digit_sum: digitSum(Number(number)),
+      is_prime: isPrime(num),
+      is_perfect: isPerfect(num),
+      properties: getProperties(num),
+      digit_sum: digitSum(num),
       fun_fact: funFact.data,
     };
 
