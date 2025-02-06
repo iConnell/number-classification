@@ -1,11 +1,6 @@
 import { Request, Response } from "express";
 import { isPrime, isPerfect, digitSum, getProperties } from "./utils";
 import axios from "axios";
-import cors from "cors";
-import express from "express";
-
-const app = express();
-app.use(cors({ origin: "*" }));
 
 interface IQueryParams {
   number: number;
